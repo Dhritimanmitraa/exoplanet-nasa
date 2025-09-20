@@ -1,0 +1,72 @@
+﻿[
+  {
+    "id": "voyager-1",
+    "name": "Voyager 1",
+    "year": 1977,
+    "blurb": "First probe to reach interstellar space. Launched to study the outer planets, it continues to send data from beyond our solar system.",
+    "link": "https://voyager.jpl.nasa.gov/"
+  },
+  {
+    "id": "voyager-2",
+    "name": "Voyager 2",
+    "year": 1977,
+    "blurb": "Only spacecraft to visit all four outer planets. Provided unprecedented views of Uranus and Neptune.",
+    "link": "https://voyager.jpl.nasa.gov/"
+  },
+  {
+    "id": "hubble",
+    "name": "Hubble Space Telescope",
+    "year": 1990,
+    "blurb": "Revolutionary space telescope that transformed our understanding of the universe and helped discover exoplanets.",
+    "link": "https://hubblesite.org/"
+  },
+  {
+    "id": "kepler",
+    "name": "Kepler Space Telescope",
+    "year": 2009,
+    "blurb": "Discovered thousands of exoplanets using the transit method. Proved that Earth-sized planets are common.",
+    "link": "https://science.nasa.gov/mission/kepler/"
+  },
+  {
+    "id": "spitzer",
+    "name": "Spitzer Space Telescope",
+    "year": 2003,
+    "blurb": "Infrared space telescope that studied exoplanet atmospheres and characterized their compositions.",
+    "link": "https://www.spitzer.caltech.edu/"
+  },
+  {
+    "id": "tess",
+    "name": "TESS",
+    "year": 2018,
+    "blurb": "Transiting Exoplanet Survey Satellite continues Kepler's legacy, scanning the entire sky for nearby exoplanets.",
+    "link": "https://tess.mit.edu/"
+  },
+  {
+    "id": "jwst",
+    "name": "James Webb Space Telescope",
+    "year": 2021,
+    "blurb": "Most powerful space telescope ever built. Analyzes exoplanet atmospheres in unprecedented detail.",
+    "link": "https://spaceplace.nasa.gov/james-webb-space-telescope/en/"
+  },
+  {
+    "id": "parker-solar-probe",
+    "name": "Parker Solar Probe",
+    "year": 2018,
+    "blurb": "First spacecraft to 'touch' the Sun, helping us understand stellar behavior and its effects on planets.",
+    "link": "https://parkersolarprobe.jhuapl.edu/"
+  },
+  {
+    "id": "new-horizons",
+    "name": "New Horizons",
+    "year": 2006,
+    "blurb": "First close-up images of Pluto and the Kuiper Belt, expanding our knowledge of the outer solar system.",
+    "link": "https://science.nasa.gov/mission/new-horizons/"
+  },
+  {
+    "id": "perseverance",
+    "name": "Perseverance Rover",
+    "year": 2021,
+    "blurb": "Searching for signs of ancient life on Mars and collecting samples for future return to Earth.",
+    "link": "https://mars.nasa.gov/mars2020/"
+  }
+]

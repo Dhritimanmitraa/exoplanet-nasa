@@ -1,0 +1,213 @@
+[
+  {
+    "planet": "Kepler-186f",
+    "features": [
+      {
+        "id": "k186f-hab-zone-1",
+        "name": "Temperate Belt",
+        "lat": 5,
+        "lon": 32,
+        "type": "habitability",
+        "description": "A modeled temperate band where incident flux and equilibrium temperatures suggest potential for liquid water."
+      },
+      {
+        "id": "k186f-terminator-clouds",
+        "name": "Terminator Cloud Decks",
+        "lat": 12,
+        "lon": -78,
+        "type": "atmospheric-feature",
+        "description": "Potential cloud formation near the day-night boundary on a slowly rotating world."
+      }
+    ]
+  },
+  {
+    "planet": "Proxima Centauri b",
+    "features": [
+      {
+        "id": "pc-b-flare-zone",
+        "name": "Flare Exposed Hemisphere",
+        "lat": -10,
+        "lon": 140,
+        "type": "atmospheric-feature",
+        "description": "Region likely exposed to frequent stellar flares from the active M-dwarf host."
+      },
+      {
+        "id": "pc-b-magnetic",
+        "name": "Magnetic Aphelion",
+        "lat": 30,
+        "lon": -20,
+        "type": "hot-spot",
+        "description": "Hypothetical magnetic interaction point where charged particles funnel into the atmosphere."
+      }
+    ]
+  },
+  {
+    "planet": "TRAPPIST-1e",
+    "features": [
+      {
+        "id": "t1e-habit-zone",
+        "name": "Habitable Band",
+        "lat": 8,
+        "lon": 60,
+        "type": "habitability",
+        "description": "Modeled surface band with Earth-like incident flux and temperate equilibrium."
+      },
+      {
+        "id": "t1e-ice-cap",
+        "name": "Polar Ice Cap (modeled)",
+        "lat": 78,
+        "lon": 15,
+        "type": "polar-cap",
+        "description": "High-albedo polar region consistent with lower mean temperatures."
+      }
+    ]
+  },
+  {
+    "planet": "TOI-715 b",
+    "features": [
+      {
+        "id": "toi715b-haze",
+        "name": "Photochemical Haze",
+        "lat": -20,
+        "lon": 100,
+        "type": "atmospheric-feature",
+        "description": "Possible haze formation driven by modestly elevated stellar flux."
+      },
+      {
+        "id": "toi715b-temperate",
+        "name": "Temperate Zone",
+        "lat": 4,
+        "lon": -130,
+        "type": "habitability",
+        "description": "Band where modeled temperatures approach the liquid water range."
+      }
+    ]
+  },
+  {
+    "planet": "HD 40307g",
+    "features": [
+      {
+        "id": "hd40307g-oceanic",
+        "name": "Oceanic Basin (hyp.)",
+        "lat": -12,
+        "lon": 45,
+        "type": "hot-spot",
+        "description": "Hypothesized lowland basin on a super-Earth potentially hosting dense atmosphere."
+      },
+      {
+        "id": "hd40307g-cloudbelt",
+        "name": "Subtropical Cloud Belt",
+        "lat": 24,
+        "lon": -90,
+        "type": "atmospheric-feature",
+        "description": "Modeled cloud band consistent with rotation-driven circulation."
+      }
+    ]
+  },
+  {
+    "planet": "55 Cancri e",
+    "features": [
+      {
+        "id": "55cne-lava-ocean",
+        "name": "Lava Ocean",
+        "lat": 2,
+        "lon": 10,
+        "type": "hot-spot",
+        "description": "Dayside molten surface due to extreme irradiation levels."
+      },
+      {
+        "id": "55cne-thermal-peak",
+        "name": "Thermal Hotspot",
+        "lat": -8,
+        "lon": 120,
+        "type": "hot-spot",
+        "description": "Peak thermal emission offset from substellar point by super-rotating winds."
+      }
+    ]
+  },
+  {
+    "planet": "WASP-12b",
+    "features": [
+      {
+        "id": "wasp12b-atm-escape",
+        "name": "Atmospheric Escape Tail",
+        "lat": 0,
+        "lon": -60,
+        "type": "atmospheric-feature",
+        "description": "Escaping atmosphere forming a comet-like tail under intense stellar heating."
+      },
+      {
+        "id": "wasp12b-dayside",
+        "name": "Ultra-hot Dayside",
+        "lat": 5,
+        "lon": 30,
+        "type": "hot-spot",
+        "description": "Dayside temperatures exceeding 2500 K producing strong thermal gradients."
+      }
+    ]
+  },
+  {
+    "planet": "Gliese 667Cc",
+    "features": [
+      {
+        "id": "g667cc-hab-zone",
+        "name": "Habitable Candidate Zone",
+        "lat": -6,
+        "lon": -10,
+        "type": "habitability",
+        "description": "Region with moderate insolation potentially supporting temperate climates."
+      },
+      {
+        "id": "g667cc-aurora",
+        "name": "Auroral Oval (hyp.)",
+        "lat": 67,
+        "lon": -120,
+        "type": "atmospheric-feature",
+        "description": "Potential auroral activity driven by stellar wind interactions."
+      }
+    ]
+  },
+  {
+    "planet": "K2-18b",
+    "features": [
+      {
+        "id": "k218b-hycean",
+        "name": "Hycean Cloud Deck",
+        "lat": 10,
+        "lon": 80,
+        "type": "atmospheric-feature",
+        "description": "High-altitude cloud layer consistent with a Hycean world hypothesis."
+      },
+      {
+        "id": "k218b-temperate",
+        "name": "Temperate Band",
+        "lat": -3,
+        "lon": -140,
+        "type": "habitability",
+        "description": "Band with equilibrium temperatures favorable for temperate conditions."
+      }
+    ]
+  },
+  {
+    "planet": "GJ 1002b",
+    "features": [
+      {
+        "id": "gj1002b-terminator",
+        "name": "Terminator Region",
+        "lat": 0,
+        "lon": 160,
+        "type": "atmospheric-feature",
+        "description": "Transition zone between day and night on a close-in world."
+      },
+      {
+        "id": "gj1002b-cold-pole",
+        "name": "Cold Polar Cap",
+        "lat": -75,
+        "lon": 45,
+        "type": "polar-cap",
+        "description": "Modeled polar region with significantly lower equilibrium temperatures."
+      }
+    ]
+  }
+]
+

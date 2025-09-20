@@ -1,0 +1,49 @@
+{
+  "name": "exo-pocket",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:index": "node scripts/build-search-index.js",
+    "build": "npm run build:index && tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "audio:info": "node -e \"console.log('Web Speech API is used for narration; no npm deps needed.')\"",
+    "shaders:build": "node -e \"console.log('Using Three.js + R3F; no shader compilation step required.')\"",
+    "3d:features": "node -e \"console.log('Advanced 3D features (particles, atmosphere, orbits, comparison) implemented with existing Three.js & R3F.')\""
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.97.4",
+    "@react-three/fiber": "^8.15.12",
+    "@react-spring/core": "^9.7.3",
+    "@react-spring/three": "^9.7.3",
+    "@sentry/react": "^7.114.0",
+    "date-fns": "^3.6.0",
+    "lunr": "^2.3.9",
+    "localforage": "^1.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.25.1",
+    "recharts": "^2.12.7",
+    "three": "^0.160.0",
+    "uuid": "^9.0.1",
+    "web-vitals": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.160.0",
+    "@types/lunr": "^2.3.4",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-pwa": "^0.20.0",
+    "vitest": "^1.6.0"
+  }
+  ,
+  "advanced3DNotes": "Particle systems, atmospheric scattering, orbital mechanics, and comparison views are implemented using existing dependencies (three, @react-three/fiber, @react-three/drei, @react-spring/*). No additional npm packages are required."
+}

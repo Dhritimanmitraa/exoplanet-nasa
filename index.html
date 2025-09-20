@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ExoArchive Pocket - Discover and explore exoplanets and space heritage. Browse thousands of confirmed exoplanets with detailed information and timeline of space exploration missions." />
+    <meta name="keywords" content="exoplanets, space exploration, NASA, astronomy, planets, timeline, discovery" />
+    <title>ExoArchive Pocket - Discover Exoplanets</title>
+  </head>
+  <body>
+    <!-- Background video (looping). If the browser can't play video, CSS fallback uses /images/blackhole.jpg -->
+    <!-- controls are added temporarily for debugging; they can be removed later -->
+    <video class="bg-video" controls autoplay muted loop playsinline aria-hidden="true">
+      <source src="/images/blackhole.mp4" type="video/mp4" />
+      <!-- WebM fallback for browsers that prefer VP9/AV1-based containers -->
+      <source src="/images/blackhole.webm" type="video/webm" />
+      <!-- Fallback text if video element is not supported -->
+      Your browser does not support the video tag. The background image will be used instead.
+    </video>
+  <div class="site-overlay" aria-hidden="true"></div>
+    <!-- Fallback user-gesture button: shown when autoplay is blocked so user can start background video -->
+    <button id="bg-play-btn" aria-hidden="true" style="display:none">Play background</button>
+  <div id="app"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- Theme initialization: set `data-theme` on <html> early to avoid FOUC. Uses localStorage 'exo-theme' -> 'dark'|'light' -->
+    <script>
+      (function(){
+        try {
+          var theme = localStorage.getItem('exo-theme');
+          if (!theme) {
+            // Respect OS preference initially
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            theme = prefersDark ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch(e) { /* ignore */ }
+      })();
+    </script>
+    <script>
+      // Video diagnostics: log load/play/error events for debugging
+      (function(){
+        const v = document.querySelector('.bg-video');
+        if (!v) return;
+          function safeLog(...args){ try{ console.log('[BG-VIDEO]',...args); } catch(e){} }
+          safeLog('currentSrc', v.currentSrc, 'canPlayType', v.canPlayType('video/mp4'));
+          v.addEventListener('loadeddata', ()=> safeLog('loadeddata', v.readyState));
+          v.addEventListener('loadedmetadata', ()=> safeLog('loadedmetadata', v.duration, v.videoWidth, v.videoHeight));
+          v.addEventListener('play', ()=> safeLog('play'));
+          v.addEventListener('playing', ()=> safeLog('playing'));
+          v.addEventListener('pause', ()=> safeLog('pause'));
+          v.addEventListener('error', (e)=>{ safeLog('error', e); /* keep video hidden handling conservative */ });
+          // If the source file is not playable, wait longer before hiding — some networks or setups take longer.
+          setTimeout(()=>{
+            if (v.readyState === 0) { safeLog('readyState still 0 after timeout — do not hide automatically, check network/codec'); }
+          }, 5000);
+
+          // Try programmatic play and log any promise rejection (autoplay policy or other errors)
+          const playButton = document.getElementById('bg-play-btn');
+          function showPlayButton(){ if (playButton) { playButton.style.display = 'block'; playButton.setAttribute('aria-hidden','false'); }}
+          function hidePlayButton(){ if (playButton) { playButton.style.display = 'none'; playButton.setAttribute('aria-hidden','true'); }}
+
+          try {
+            const p = v.play();
+            if (p && typeof p.then === 'function') {
+              p.then(()=> { safeLog('programmatic play() succeeded'); hidePlayButton(); })
+               .catch(err => { safeLog('programmatic play() rejected', err); /* show user-gesture */ showPlayButton(); });
+            } else {
+              safeLog('play() returned no promise (older browser)');
+            }
+          } catch(err) { safeLog('play() threw', err); showPlayButton(); }
+
+          // If video hasn't loaded/played after a short delay, show play button as fallback
+          setTimeout(()=>{
+            if (v.readyState === 0 || v.paused) { safeLog('video not ready/paused after timeout — showing play button'); showPlayButton(); }
+          }, 2000);
+
+          // Wire up the play button to start the video with a user gesture
+          if (playButton) {
+            playButton.addEventListener('click', function(){
+              try {
+                const p = v.play();
+                if (p && typeof p.then === 'function') {
+                  p.then(()=> { safeLog('user-gesture play succeeded'); hidePlayButton(); })
+                   .catch(err => safeLog('user-gesture play rejected', err));
+                }
+              } catch(err) { safeLog('user-gesture play threw', err); }
+            });
+          }
+      })();
+    </script>
+  </body>
+</html>
